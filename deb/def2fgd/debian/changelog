@@ -1,4 +1,10 @@
-def2fgd (1.2-1) UNRELEASED; urgency=medium
+def2fgd (1.2-2) unstable; urgency=medium
+
+  * New version (Closes: #123458)
+
+ -- Roman Chistokhodov <freeslave93@gmail.com>  Tue, 14 Jan 2020 10:50:10 +0300
+
+def2fgd (1.2-1) unstable; urgency=medium
 
   * New version (Closes: #123457)
 

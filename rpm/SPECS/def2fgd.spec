@@ -1,11 +1,11 @@
 Name:           def2fgd
 Version:        1.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A small tool to convert .def and .ent files to .fgd
 
 License:        MIT
-URL:            https://bitbucket.org/FreeSlave/%{name}
-Source0:        %{name}-%{version}.tar.gz
+URL:            https://github.com/FreeSlave/%{name}
+Source0:        https://github.com/FreeSlave/def2fgd/archive/def2fgd-1.2.tar.gz
 
 BuildRequires:  gcc-c++ gettext
 
@@ -37,6 +37,8 @@ make DESTDIR=%{buildroot} prefix=/usr install
 
 
 %changelog
+* Tue Jan 14 2020 Roman Chistokhodov 1.2-2
+- New version
 * Thu Oct 20 2016 Roman Chistokhodov 1.2-1
 - New version
 * Mon Nov 23 2015 Roman Chistokhodov 1.1-1

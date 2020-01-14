@@ -2,9 +2,11 @@
 
 Making [def2fgd](https://github.com/FreeSlave/def2fgd) packages for different distros.
 
+Packages are published on [OBS](https://software.opensuse.org//download.html?project=home%3AFreeSlave&package=def2fgd).
+
 ## Make deb package
 
-First make a orig archive
+First make an orig archive. Assuming [def2fgd](https://github.com/FreeSlave/def2fgd) is cloned into the same directory as this repository is:
 
 ```
     ./make_deb_orig.sh
@@ -63,7 +65,7 @@ Build using mock:
     CONFIGURATION=epel-6-x86_64
     VENDOR=el6
     VERSION="$(cat ../def2fgd/version)"
-    REVISION=1
+    REVISION=2
     mkdir -p rpm/SRPMS rpm/RPMS
     mock --resultdir="rpm/SRPMS" -r "$CONFIGURATION" --buildsrpm --spec "rpm/SPECS/def2fgd.spec" --sources "rpm/SOURCES"
     mock --resultdir="rpm/RPMS" -r "$CONFIGURATION" "rpm/SRPMS/def2fgd-$VERSION-$REVISION.$VENDOR.src.rpm"
