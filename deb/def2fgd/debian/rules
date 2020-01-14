@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+export DEB_CXXFLAGS_MAINT_APPEND  = -Wall
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(MAKE) LOCALEDIR=/usr/share/locale USE_LOCALE=gettext
+	$(MAKE) translations
+override_dh_auto_clean:
+	$(MAKE) distclean
+	$(MAKE) clean-translations
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr
